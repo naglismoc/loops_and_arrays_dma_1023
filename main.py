@@ -1,3 +1,4 @@
+import random
 
 txt = "Jonas"
 result = txt.replace("o","a")
@@ -18,7 +19,7 @@ numbers.sort()
 print(numbers)
 numbers.reverse()
 print(numbers)
-
+numbers.remove(14) # pasalins 3cia elementa, nes jo reiksme 14. salins tik viena.
 
 numbers.insert(2,15)
 print(numbers)
@@ -131,10 +132,10 @@ for i, name in enumerate(names):
 
 print("-----------------------------------")
 arr2d = [
-    [1, 4, 10],
-    [3, 5, 8],
-    [1, 2, 3],
-    [5, 10, 5]
+    [1, 4, 10], # 0
+    [3, 5, 8], # 1
+    [1, 2, 3], # 2
+    [5, 10, 5], # 3
 ]
 
 print(arr2d)
@@ -153,4 +154,92 @@ print(f'suma {suma}, kiekis {count}, vidurkis {suma /count}.')
 # matematika lietuviu fizika
 # 1           4       10
 # 3           5       8
+suma = 0
+for row in arr2d[1:3]:
+    for cell in row[1:]:
+        suma += cell
+        print(cell)
+print(suma)
+
+print("-----------------------")
+for i in range(10):
+    print("Dienos skaicius yra:")
+    if i % 2 == 0:
+        continue
+    print(i)
+
+print("==========================")
+for i in range(1, 10):
+    print("Dienos skaicius yra:")
+    if i % 4 == 0:
+        break
+    print(i)
+
+counter = 0
+while True:
+    counter +=1
+    if counter >= 4:
+        break
+    print("hahaha", counter)
+
+
+print("==========================")
+counter = 0
+should_continue = True
+while should_continue:
+    counter +=1
+    if counter >= 4:
+        should_continue = False
+    print("hahaha", counter)
+
+
+# rnd_num = random.randint(1,6)
+# while rnd_num != 6:
+#     print(rnd_num)
+
+while True:
+    dice = random.randint(1,6)
+    print(dice)
+    if dice == 6:
+        break
+print("==========================")
+
+should_roll_dice = True
+while should_roll_dice:
+    dice = random.randint(1,6)
+    print(dice)
+    if dice == 6:
+        should_roll_dice = False
+
+# magic words +
+# x*y +
+# sort +
+# while +
+
+for y in range(1,11):
+    for x in range(1,11):
+        print(f'{x * y: >3}', end=" ")
+    print()
+
+print("==========================")
+
+for y in range(1, 11):
+    row = ""
+    for x in range(1, 11):
+        row = row + str(x * y) + " "
+    print(row)
+print("==========================")
+
+#       0 1 2  3 4 5
+arr = [ 1,4,12,3,2,8]
+print(arr)
+
+for a in range(len(arr)):
+    for i in range(len(arr) -1):
+        if arr[i] > arr[i + 1]:
+            temp = arr[i] # temp = 1
+            arr[i] = arr[i + 1] # arr[i] = 4
+            arr [i + 1] = temp # arr[i+1] = 1
+print(arr)
+
 
