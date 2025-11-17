@@ -105,6 +105,52 @@ for i, vyriskio_vardas in enumerate(vardai):
     print(f'{i+1}. {vyriskio_vardas};')
 
 
+names = [
+    "Alexander", "Benjamin", "Charlotte", "Daniel", "Elizabeth",
+    "Frederick", "Gabriella", "Henry", "Isabella", "Jacob",
+    "Katherine", "Liam", "Madeline", "Nathaniel", "Olivia",
+    "Patrick", "Quinn", "Rebecca", "Samuel", "Theresa",
+    "Ulysses", "Victoria", "William", "Xavier", "Yvonne",
+    "Zachary", "Abigail", "Brandon", "Cassandra", "Derek",
+    "Emily", "Francis", "Grace", "Hannah", "Ian",
+    "Julia", "Kevin", "Laura", "Michael", "Natalie",
+    "Oscar", "Penelope", "Quincy", "Rachel", "Stephen",
+    "Tracy", "Uma", "Vincent", "Wendy", "Yosef"
+]
+
+for name in names: #du identacijos lygiai
+    if len(name) <= 4:
+        print(name)
+
+# select name from names where length(name) <= 4;
+print("=======================")
+for i, name in enumerate(names):
+    if i % 5 == 0:  # 7 % 5 = 2   2! = 0;    20 % 5 = 0; 0 == 0;
+        print(i, name)
 
 
+print("-----------------------------------")
+arr2d = [
+    [1, 4, 10],
+    [3, 5, 8],
+    [1, 2, 3],
+    [5, 10, 5]
+]
+
+print(arr2d)
+for row in arr2d:
+    print(row)
+
+print("-----------------------------------")
+suma = 0
+count = 0
+for row in arr2d:
+    for data in row:
+        suma = suma + data
+        count += 1
+print(f'suma {suma}, kiekis {count}, vidurkis {suma /count}.')
+
+# matematika lietuviu fizika
+# 1           4       10
+# 3           5       8
 
